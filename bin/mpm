@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+require __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$application = new Application();
+
+foreach (scandir(__DIR__ . '/../src/Console/Commands/') as $file) {
+    if (strpos($file, 'Command.php') === false) {
+        continue;
+    }
+
+    $class = '\\MPM\\Console\\Commands\\' . str_replace('.php', '', $file);
+    $application->add(new $class);
+}
+
+$application->run();
