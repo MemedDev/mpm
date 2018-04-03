@@ -1,6 +1,6 @@
 {
     "name": "memeddev/mpm",
-    "type": "project",
+    "type": "library",
     "authors": [
         {
             "name": "Gabriel Rodrigues Couto",
