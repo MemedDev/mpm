@@ -4,12 +4,15 @@
     "authors": [
         {
             "name": "Gabriel Rodrigues Couto",
-            "email": "gabrielrcouto@gmail.com"
+            "email": "gabriel.couto@memed.com.br"
         }
     ],
     "require": {
         "symfony/console": "^4.0"
     },
+    "bin": [
+        "bin/mpm"
+    ],
     "autoload": {
         "psr-4": {
             "MPM\\": "src/"
